@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+   <!-- This line declares the document type and sets the language to English. -->
+   <head>
+      <base target="_top">
+      <!-- The 'base' element sets a base URL for relative URLs. The 'target' attribute "_top" specifies that links should open in the full body of the browser. -->
+      <!-- Meta tags for character set and viewport -->
+      <meta charset="utf-8">
+      <!-- This meta tag specifies the character encoding of the document as UTF-8 (Unicode). -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- This meta tag defines the viewport settings for responsive design, ensuring the content fits the device's width and starts at a 1:1 scale. -->
+      <!-- Title of the webpage -->
+      <title>Choropleth Tutorial - Leaflet</title>
+      <!-- This sets the title of the webpage that appears in the browser's title bar or tab. -->
+      <!-- Favicon -->
+      <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+      <!-- This link tag specifies the favicon (website icon) that is displayed in the browser tab. -->
+      <!-- Leaflet CSS -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+      <!-- This link loads the Cascading Style Sheets (CSS) file for the Leaflet mapping library from a remote source. -->
+      <!-- Internal CSS styles -->
+      <link rel="stylesheet" href="mapStyle.css" />
+   </head>
+   <body>
+      <!-- Map container -->
+      <div id='map'></div>
+      <!-- This creates a 'div' element with the id 'map' to serve as the container for the map. -->
+      <!-- Leaflet JavaScript libraries -->
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+      <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+      <!-- These script tags load the Leaflet JavaScript libraries and the Leaflet Geocoder library from remote sources. -->
+      <!-- External JavaScript files for data -->
+      <script type="text/javascript" src="./data/line.js"></script>
+      <script type="text/javascript" src="./data/point.js"></script>
+      <script type="text/javascript" src="./data/polygon.js"></script>
+      <script type="text/geojson" src="./data/WI_Counties.geojson"></script>
+      <script type="text/javascript" src="./data/nepaldata.js"></script>
+      <script type="text/javascript" src="./data/statesData.js"></script>
+      <!-- These script tags load external JavaScript files for data from relative paths. -->
+      <script type="text/javascript" src="mapScript.js"></script>
+   </body>
+</html>
