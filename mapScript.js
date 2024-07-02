@@ -23,7 +23,7 @@ class ChoroplethMap {
    // Method to initialize the map
    initMap() {
       // Creating a Leaflet map centered at specific coordinates
-      this.map = L.map('map').setView([28.183303761640847, 0.35412466140639], 2.25);
+      this.map = L.map('map').setView([28.183303761640847, 0.35412466140639], 3.50);
       // This creates a Leaflet map and sets its initial view centered at specific latitude and longitude coordinates.
       // Setting minimum and maximum zoom levels for the map
       this.map.options.minZoom = 2.25;
@@ -86,7 +86,7 @@ class ChoroplethMap {
       // GeoJSON layers for different data
       this.linedata = L.geoJSON(lineJSON).addTo(this.map);
       this.pointdata = L.geoJSON(pointJSON).addTo(this.map);
-      this.WI_boundarydata = L.geoJSON(polygonJSON).addTo(this.map);
+      this.WI_boundarydata = L.geoJSON(WI_boundarydata).addTo(this.map);
       this.nepaldata = L.geoJSON(nepaldata).addTo(this.map);
       // These lines create GeoJSON layers for various types of data (lines, points, Nepal data) and add them to the map.
       // GeoJSON layer for US states data
