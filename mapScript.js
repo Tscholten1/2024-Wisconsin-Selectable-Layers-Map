@@ -26,7 +26,7 @@ class ChoroplethMap {
       this.map = L.map('map').setView([28.183303761640847, 0.35412466140639], 3.50);
       // This creates a Leaflet map and sets its initial view centered at specific latitude and longitude coordinates.
       // Setting minimum and maximum zoom levels for the map
-      this.map.options.minZoom = 2.25;
+      this.map.options.minZoom = 3.25;
       this.map.options.maxZoom = 19;
       // These lines set the minimum and maximum zoom levels for the map.
       // OpenStreetMap tile layer
@@ -113,7 +113,7 @@ class ChoroplethMap {
       const baseLayers = {
          "Satellite": this.googleSat,
          "Google Map": this.googleStreets,
-         "Water Color": this.Stamen_Watercolor,
+//         "Water Color": this.Stamen_Watercolor,
          "OpenStreetMap": this.osmLayer,
       };
       // This defines a list of base layers and their associated tile layers for the layers control.
@@ -123,7 +123,7 @@ class ChoroplethMap {
          "PointData": this.pointdata,
          "LineData": this.linedata,
          "polygondata": this.polygondata,
-         "WI_boundarydata": this.polygondata,
+         "WI_boundarydata": this.WI_boundarydata,
          "statesData": this.geojson
       };
       // This defines a list of overlay layers and their associated map data for the layers control.
